@@ -1,10 +1,8 @@
-<h1>Hello World</h1>
-
+<h1>Main Page</h1>
 <form [formGroup]="reactiveForm">
-  <app-json-input formControlName="result"></app-json-input>
+  <app-my-input formControlName="result"></app-my-input>
+  <input 
+    value="Submit"
+    (click)="nextStep($event)"
+    type="button">
 </form>
-
-<p>form is valid: {{ reactiveForm.valid ? 'true' : 'false' }}</p>
-
-<p>Value:</p>
-<pre>{{ reactiveForm.value | json }}</pre>

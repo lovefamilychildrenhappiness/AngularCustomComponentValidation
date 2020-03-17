@@ -5,12 +5,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { JsonInputComponent } from './json-input/json-input.component';
+import { MyInputComponent } from './my-input/my-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JsonInputComponent
+    MyInputComponent
   ],
   imports: [
     BrowserModule,

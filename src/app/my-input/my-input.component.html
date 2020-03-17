@@ -1,0 +1,5 @@
+<textarea
+ [value]="value" 
+ (input)="onChange($event.target.value)"
+ [ngClass]="{'failed-validation' : this.validationError }">
+</textarea>

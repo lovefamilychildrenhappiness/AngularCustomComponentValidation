@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormGroup, FormBuilder} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,17 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {
     this.reactiveForm = this.fb.group({
-      result: [{"test123":"test456"}]
+      result: ['', Validators.required]
     })
+  }
+
+  private nextStep(event){
+    // How do I dynamically change the class of the form control so I can change the style if formControl invalid when clicking the nextStep button
+    // pseudocode:
+    // if( !this.reactiveForm.controls['result'].valid ){
+    //  this.reactiveForm.controls['result'].addClass('failed-validation');
+    // }
+
+    return false;
   }
 }
